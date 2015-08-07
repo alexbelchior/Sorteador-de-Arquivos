@@ -54,22 +54,23 @@ public class ListaArquivos3 extends JFrame {
         
         try {
 
-        if (!arquivo.exists( ) ) {
-        arquivo.createNewFile( );
-        }
-        FileWriter fw = new FileWriter (arquivo, true);//escreve no final do arquivo, sem sobrescreve-lo
-        BufferedWriter bw = new BufferedWriter(fw);
-        bw.write(data + "\n");
-        bw.newLine();
-        bw.newLine();
-        bw.write(texto);
-        bw.newLine();
-        bw.newLine();
-        bw.write("\n----------------------------------");
-        bw.newLine();
-        bw.newLine( );
-        bw.close( );
-        fw.close( );
+        	if (!arquivo.exists( ) ) {
+        		arquivo.createNewFile( );
+        	}
+        	
+        	FileWriter fw = new FileWriter (arquivo, true);//escreve no final do arquivo, sem sobrescreve-lo
+        	BufferedWriter bw = new BufferedWriter(fw);
+        	bw.write(data + "\n");
+        	bw.newLine();
+        	bw.newLine();
+        	bw.write(texto);
+        	bw.newLine();
+        	bw.newLine();
+        	bw.write("\n----------------------------------");
+        	bw.newLine();
+        	bw.newLine( );
+        	bw.close( );
+        	fw.close( );
 
         }catch(FileNotFoundException e){
         	
